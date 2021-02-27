@@ -1,0 +1,125 @@
+/* TABLET & MOBILE */
+@media (max-width: 1023px){
+    .hide-on-tablet-mobile{
+        display: none;
+    }
+   
+    .header__cart-list{
+        position: fixed;
+        /* display: block; */
+        top: var(--header-height);
+        right: 0;
+        width: 100%;
+        padding: 0 57px;
+        z-index: 10;
+        
+    }
+    .header__cart-list::after{
+        display: none;
+    }
+    .header{
+        position: fixed;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        top: 0;
+        
+    }
+    .app_container{
+        margin-top:var(--distance-header);
+    }
+    .header-sort-bar{
+        display: flex;
+    }
+    .app_content{
+        padding-top: 8px;
+    }
+    .mobile-category{
+        display: block;
+    }
+   
+   
+
+}
+/* TABLET */
+@media (min-width:739px) and (max-width:1023px){
+    :root{
+        --header-height:68px;
+        --nav-height:0px;
+    } 
+    .hide_on_tablet{
+        display: none;
+    }
+    .header_cart {
+        width: 80px;
+        text-align: right;
+    }
+
+}
+/* MOBILE */
+@media (max-width:739px){
+    :root{
+        --header-height:54px;
+        --nav-height:0px;
+    }
+    .hide_on_mobile{
+        display: none;
+    }
+    .header__logo{
+        width: unset;
+    }
+    .header_cart{
+        width: unset;
+    }
+    .header__search{
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        line-height: 46px;
+        z-index: 5;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+        padding: 0 16px;
+        animation: mobileSearchSidein linear 0.3s;
+        display: none;
+    }
+    @keyframes mobileSearchSidein {
+        from{
+            opacity: 0;
+            top: calc((var(--header-height))/2);
+        }
+        to{
+            opacity: 1;
+            top:var(--header-height);
+        }
+        
+    }
+    .header__search-history{
+        width: 100%;
+        left: 0;
+        position: fixed;
+        top: calc((var(--header-height)) + (var(--header-sort-height)));
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .header-mobile-search{
+        display: block;
+    }
+    .pagination-item__link{
+        min-width: 36px;
+        height: 28px;
+        font-size: 1.6rem;
+    }
+    .pagination-item{
+        margin: 0;
+    }
+    .app_content{
+        margin:0;
+    }
+    .header__logo-img{
+        width: 110px;
+    }
+    .footer_content{
+        padding: 0 16px;
+    }
+    
+}
